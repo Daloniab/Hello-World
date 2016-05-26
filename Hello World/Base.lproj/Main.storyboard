@@ -1,25 +1,63 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Hello_World" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hello, World !!!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="T8G-xZ-3qp">
+                                <rect key="frame" x="93" y="105" width="216" height="112"/>
+                                <color key="backgroundColor" red="0.91904062032699585" green="0.36304557323455811" blue="0.040116079151630402" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" name="KhmerSangamMN" family="Khmer Sangam MN" pointSize="30"/>
+                                <color key="textColor" red="0.025030672550201416" green="0.97107571363449097" blue="0.63765859603881836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ze1-Ww-iJY">
+                                <rect key="frame" x="118" y="274" width="166" height="100"/>
+                                <color key="backgroundColor" red="0.98978108167648315" green="0.98014265298843384" blue="0.0091794487088918686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Mxa-bF-0JS"/>
+                                </constraints>
+                                <state key="normal" title="I am the BUTTON">
+                                    <color key="titleColor" red="0.030374219641089439" green="0.067219749093055725" blue="0.038321662694215775" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="ButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="u3o-Ca-dS4"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.025030672550201416" green="0.97107571363449097" blue="0.63765859603881836" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="T8G-xZ-3qp" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="77" id="1S6-4w-dYA"/>
+                            <constraint firstItem="Ze1-Ww-iJY" firstAttribute="top" secondItem="T8G-xZ-3qp" secondAttribute="bottom" constant="57" id="70o-fk-6Gf"/>
+                            <constraint firstItem="T8G-xZ-3qp" firstAttribute="centerX" secondItem="Ze1-Ww-iJY" secondAttribute="centerX" id="8xL-fP-B0y"/>
+                            <constraint firstItem="T8G-xZ-3qp" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="85" id="E8F-z8-zfB"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ze1-Ww-iJY" secondAttribute="bottom" constant="293" id="jcg-EW-DkO"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="T8G-xZ-3qp" secondAttribute="trailing" constant="50" id="obM-Pb-v7c"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Ze1-Ww-iJY" secondAttribute="trailing" constant="75" id="s2g-f5-jMb"/>
+                        </constraints>
                     </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="helloWorldLabel" destination="T8G-xZ-3qp" id="PBV-LU-ygJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-188.5" y="319.5"/>
         </scene>
     </scenes>
 </document>
